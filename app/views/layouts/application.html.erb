@@ -15,7 +15,9 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="#"><span>Bookers</span></a>
+          <li >
+            <%= link_to "Bookers",root_path %>
+          </li>
           <button class="navbar" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expended="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,7 +28,7 @@
               <%= link_to "Home" %>
             </li>
               
-            <li>
+            <li >
               <%= link_to "Users" %>
             </li>
               
@@ -59,6 +61,13 @@
         </div>
       </nav>
     </header>
+    <main class="mb-auto">
     <%= yield %>
+    </main>
+    <footer>
+      <div class="container mt-10">
+        <p class="text-center">CopyRight Infratop.inc</p>
+      </div>
+    </footer>
   </body>
 </html>
