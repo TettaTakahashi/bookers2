@@ -1,0 +1,22 @@
+
+  <h2>Books</h2>
+    
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>opinion</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td><%= image_tag @user.user.get_profile_image(100,100) %></td><!--仮-->
+          <td><%= book.title %></td>
+          <td><%= book.boby %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
