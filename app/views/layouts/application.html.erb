@@ -24,59 +24,51 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
-            <li class="my-1 mr-3">
-              <%= link_to do %>
-                <i class="fa-solid fa-house text-white"></i>
-                <sapn class="text-white">Home</sapn>
+            <li>
+              <%= link_to root_path, class:"nav-link text-light" do %>　　　<!--仮-->
+                <i class="fa-solid fa-house"></i> Home
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to do %>
-                <i class="fa-solid fa-users text-white"></i>
-                <sapn class="text-white">Users</sapn>
+            <li>
+              <%= link_to root_path, class:"nav-link text-light" do %>　　　<!--仮-->
+                <i class="fa-solid fa-users"></i> Users
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to do %>
-                <i class="fa-solid fa-book-open text-white"></i>
-                <sapn class="text-white">Books</sapn>
+            <li>
+              <%= link_to root_path, class:"nav-link text-light" do %>　　　<!--仮-->
+                <i class="fa-solid fa-book-open"></i> Books
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa-solid fa-right-from-bracket text-white"></i>
-                <sapn class="text-white">Log out</sapn>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete, class:"nav-link text-light" do %>
+                <i class="fa-solid fa-right-from-bracket"></i> Log out
               <% end %>
             </li>
             <% else %>
-            <li class="my-1 mr-3">
-              <%= link_to do %>
-                <i class="fa-solid fa-house text-white"></i>
-                <span class="text-white">Home</span>
+            <li>
+              <%= link_to root_path, class:"nav-link text-light" do %>
+                <i class="fa-solid fa-house"></i> Home
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to do%>
-                <i class="fa-solid fa-link text-white"></i>
-                <span class="text-white">About</span>
+            <li>
+              <%= link_to homes_about_path, class:"nav-link text-light" do %>
+                <i class="fa-solid fa-link"></i> About
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to new_user_registration_path do %>
-                <i class="fa-solid fa-user-plus text-white"></i>
-                <span class="text-white">Sign up</span>
+            <li>
+              <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
+                <i class="fa-solid fa-user-plus"></i> Sign up
               <% end %>
             </li>
               
-            <li class="my-1 mr-3">
-              <%= link_to new_user_session_path do %>
-                <i class="fa-solid fa-right-to-bracket text-white"></i>
-                <span class="text-white">Log in</span>
+            <li>
+              <%= link_to new_user_session_path, class:"nav-link text-light" do %>
+                <i class="fa-solid fa-right-to-bracket"></i> Log in
               <% end %>
             </li>
             <% end %>
@@ -85,13 +77,13 @@
         </div>
       </nav>
     </header>
-    <main class="mb-auto">
+    
     <%= yield %>
-    </main>
     <footer>
-      <div class="container mt-10">
+      <div class="container mt-5">
         <p class="text-center">CopyRight Infratop.inc</p>
       </div>
     </footer>
+    
   </body>
 </html>
