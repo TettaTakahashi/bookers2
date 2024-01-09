@@ -4,4 +4,7 @@ class Book < ApplicationRecord
     
     has_one_attached :profileimage
     
+    validates :title, presence: true
+    validates :body, presence: true
+    
 end
