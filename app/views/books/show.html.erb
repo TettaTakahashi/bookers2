@@ -20,13 +20,17 @@
           <td><%= @book.title %></td>
           <td><%= @book.body %></td>
           <td>
-            <%= link_to edit_book_path(@book), class:"btn btn-success btn-sm" do %>
-              Edit
+            <% if @book.user == current_user %>
+              <%= link_to edit_book_path(@book), class:"btn btn-success btn-sm" do %>
+                Edit
+              <% end %>
             <% end %>
           </td>
           <td>
-            <%= link_to book_path(@book), method: :delete, "data-confirm"=>"本当に消しますか？", class:"btn btn-danger btn-sm" do %>
-              Destroy
+            <% if @book.user == current_user %>
+            　<%= link_to book_path(@book), method: :delete, "data-confirm"=>"本当に消しますか？", class:"btn btn-danger btn-sm" do %>
+              　Destroy
+            　<% end %>
             <% end %>
           </td>
         </tr>
