@@ -19,6 +19,7 @@ class User < ApplicationRecord
   end
   
   has_many :books, dependent: :destroy
+  has_many :notifications, dependent: :destroy
   
   GUEST_USER_EMAIL = "guest@example.com"
   
