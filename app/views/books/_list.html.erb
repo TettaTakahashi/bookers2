@@ -18,8 +18,9 @@
       </tr>
     </table>  
     
-    <a href="<%= edit_user_path(user.id) %>" class="btn btn-outline-secondary btn-block"><i class="fa-solid fa-user-gear"></i></a>
-          
+    <% if user.email != "guest@example.com" %>
+      <a href="<%= edit_user_path(user.id) %>" class="btn btn-outline-secondary btn-block"><i class="fa-solid fa-user-gear"></i></a>
+    <% end %>
           
   <h2>New book</h2>
           

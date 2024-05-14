@@ -9,7 +9,10 @@
     <p>about various books!</p>
     
     <div class="col-11 mx-auto">
+      <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: "btn btn-secondary btn-sm btn-block" %>
+      
       <a href="users/sign_in" class="btn btn-sm btn-block btn-info">Log in</a>
+      
       <a href="users/sign_up" class="btn btn-sm btn-block btn-success mt-3">Sign up</a>
     </div>
   </div>
